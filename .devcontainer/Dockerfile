@@ -1,13 +1,9 @@
-FROM ruby:3.2.1
+FROM ruby:3.2.0
 
 # Default directory
-ENV INSTALL_PATH /opt/app
+ENV INSTALL_PATH /workspaces/hackdays-2023
 RUN mkdir -p $INSTALL_PATH
-
-# Install rails
-RUN gem install rails bundler
-#RUN chown -R user:user /opt/app
-WORKDIR /opt/app
+WORKDIR /workspaces/hackdays-2023
 
 # Run a shell
-CMD ["/bin/sh"]
+# CMD ["/bin/bash"]
